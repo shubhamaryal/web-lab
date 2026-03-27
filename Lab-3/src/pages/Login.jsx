@@ -6,10 +6,11 @@ const Login = () => {
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
-  const handleLogin = () => {
+  const handleLogin = (e) => {
+    e.preventDefault();
     console.log("Email:", email);
     console.log("Password:", password);
-    navigate("/todo");
+    navigate("/home");
   };
 
   return (
@@ -40,12 +41,12 @@ const Login = () => {
           </button>
         </form>
 
-        <button
+        {/* <button
           onClick={() => navigate("/todo")}
           className="w-full border p-2 rounded mt-4 cursor-pointer"
         >
           Go to Todos
-        </button>
+        </button> */}
 
         <p className="text-center mt-4">
           Don't have an account?{" "}
